@@ -6,6 +6,8 @@
 * {
     font-family: 'Chakra Petch', sans-serif;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 .container {
     display: grid;
