@@ -1,0 +1,37 @@
+/* PARAGRAPH FONT */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Roboto:wght@100;900&display=swap');
+/* FEATURE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap');
+/* UNIVERSAL STYLING */
+* {
+    font-family: 'Chakra Petch', sans-serif;
+    list-style-type: none;
+}
+.container {
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+.grid-item {
+    border: 1px solid #ccc;
+    padding: 3rem;
+    text-align: center;
+}
+/* HEADER SECTION */
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 9em;
+}
+/* TICKER */
+.ticker {
+
+}
+/* PROFILE LINKS SECTION */
+.profile-links {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding: 3em;    
+}
+.profile-link {
+    font-size: 3em;
+}
