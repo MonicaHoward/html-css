@@ -7,6 +7,7 @@
     box-sizing: border-box;
     list-style-type: none;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -22,34 +23,80 @@ body {
     text-align: center;
 }
 .grid-item {
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     padding: 3rem;
     text-align: center;
 }
 /* HEADER SECTION */
-.title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 9em;
-}
-/* TICKER */
-.ticker {
+header {
+    /* background-color: #2F2fA2; */
+    background: #005C97;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+nav {
+    line-height: 2;
+}
+nav ul li a {
+    font-size: 1.5em;
+}
+.title {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 9em;
+    justify-content: center;
+}
+
+
 /* PROFILE LINKS SECTION */
 .profile-links {
     display: grid;
     grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+    justify-content: center;
     padding: 3em;    
 }
-.profile-link {
+/* .profile-link {
+    color: #F64C72;
+    color: rgb(231, 12, 85);
     font-size: 3em;
+} */
+.profile-link {
+    color: #F64C72;
+    font-size: 3em;
+    border: 1px solid #F64C72;
+    padding: 50px;
+    flex-basis: 50%;
+    justify-content: center;
+
+    text-align: center;
+}
+.profile-link a:visited {
+    color: #ec849b;
+
+}
+.bio {
+    line-height: 2;
+    font-size: 1.5em;
+}
+
+
+/* TICKER */
+.ticker {
+
 }
 /* CONTACT SECTION */
 .contact {
+    background-color: #2F2fA2;
     display: grid;
     grid-template-columns: repeat(2, auto);
     padding: 20px 40px;
     border-radius: 5px;
+    padding: 5em;
+}
+.grid-item {
+
 }
 .form-input {
 position: relative;
@@ -61,6 +108,7 @@ width: 300px;
     text-align: center;
     margin-bottom: 30px;
 }
+
 .form-input input,
 .form-input textarea {
     background-color: transparent;
@@ -78,11 +126,14 @@ width: 300px;
 .form-input textarea:valid {
     outline: 0
 }
+
 .btn {
+    background-color: #F64C72;
     cursor: pointer;
     display: inline-block;
     width: 50%;
-    padding: 15px;
+    padding: 15px 0;
+    
     font-family: inherit;
     font-size: 16px;
     border: 0;
@@ -103,64 +154,67 @@ width: 300px;
     top: 15px;
     left: 0;
 }
-
-
-/* form {
-    background-color: #000;
-    border-radius: 5px;
-    padding: 2em;
+.contact-message {
+    vertical-align: middle;
 }
-.contact-input {
-    position: relative;
-    margin: 20px 0 40px;
-    width: 300px;
-
+footer {
+    background-color: #242582
 }
-.form-input input, 
-.form-input textarea {
-    background-color: red;
-    border: 0;
-    border-bottom: 2px #fff solid;
-
-    display: block;
-    width: 100%;
-    padding: 15px 0;
-    font-size: 18px;
-    color: white;
+@media (max-width: 1100) {
+    .profile-link {
+        flex-basis: 20%;
+    }
 }
 
-.form-input input:focus,
-.form-input input:valid,
-.form-input textarea:focus,
-.form-input textarea:valid {
-    outline: 0;
+@media (max-width: 800px){
+    
+    section, grid-item {
+        padding: 50px 20px;
+    }
+    header {
+        font-size: 1em;
+    }
+    .profile-links {
+        grid-template-columns: repeat(2, auto);
+    }
+    .contact{
+        grid-template-columns: 1fr;
+    }
+    .profile-link {
+        flex-basis: 50%;
+    }
 }
-.form-input label {
-    position: relative;
-    top: 15px;
-    left: 0;
-    color: darkmagenta;
-}
+@media (max-width: 500px){
+    /* * {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    } */
+    .container {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-item {
+        padding: 0;
+        margin: 0;
+    }
+    .grid-items {
+        border: none
+    }
+    
+    .profile-links {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .profile-link {
+        border: none;
+        flex-basis: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
-.btn {
-    cursor: pointer;
-    display: inline-block;
-    width: 1005;
-    background: lightblue;
-    padding: 15px;
-    font-family: inherit;
-    font-size: 16px;
-    border: 0;
-    border-radius: 5px;
 }
-.btn:focus {
-    outline: 0;
-}
-
-.btn:active {
-    transform: scale(0.98);
-}
-
-.text {
-    margin-top: 30px;
-} */
