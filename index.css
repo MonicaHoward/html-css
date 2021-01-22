@@ -86,6 +86,42 @@ nav ul li a {
 .ticker {
 
 }
+/* PORTFOLIO SECTION */
+.portfolio {
+    background: #fafafa;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* height: 500px;
+    width: 500px; */
+}
+.portfolio-item {
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    width: 150px;
+    position: relative;
+}
+.portfolio-item::after {
+    content: "";
+    background-color: #ec849b;
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    transform: skewY(45deg);
+}
+.portfolio-item::before {
+    content: "";
+    background-color:#F64C72;
+    position: absolute;
+    bottom: -15px;
+    left: 8px;
+    height: 15px;
+    width: 100%;
+    transform: skewX(45deg);
+}
 /* CONTACT SECTION */
 .contact {
     background-color: #2F2fA2;
@@ -95,10 +131,8 @@ nav ul li a {
     border-radius: 5px;
     /* padding: 5em; */
 }
-.grid-item {
 
-}
-/* .form-input {
+.form-input {
 position: relative;
 margin: 20px 0 40px;
 width: 300px;
@@ -125,7 +159,7 @@ width: 300px;
 .form-input textarea:focus,
 .form-input textarea:valid {
     outline: 0
-} */
+}
 
 .btn {
     background-color: #F64C72;
@@ -185,6 +219,14 @@ footer {
     .profile-links {
         grid-template-columns: repeat(2, auto);
     }
+    .portfolio {
+        grid-gap: 2%;
+    }
+    /* .portfolio-item,
+    .portfilio-item::after,
+    .portfolio-item::before {
+        flex-basis: 50%;
+    } */
     .contact{
         grid-template-columns: 1fr;
         flex-direction: column-reverse;    }
