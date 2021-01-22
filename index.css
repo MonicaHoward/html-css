@@ -91,14 +91,14 @@ nav ul li a {
     background-color: #2F2fA2;
     display: grid;
     grid-template-columns: repeat(2, auto);
-    padding: 20px 40px;
+    /* padding: 20px 40px; */
     border-radius: 5px;
-    padding: 5em;
+    /* padding: 5em; */
 }
 .grid-item {
 
 }
-.form-input {
+/* .form-input {
 position: relative;
 margin: 20px 0 40px;
 width: 300px;
@@ -125,7 +125,7 @@ width: 300px;
 .form-input textarea:focus,
 .form-input textarea:valid {
     outline: 0
-}
+} */
 
 .btn {
     background-color: #F64C72;
@@ -168,40 +168,52 @@ footer {
 
 @media (max-width: 800px){
     
-    section, grid-item {
-        padding: 50px 20px;
+    section, .grid-item {
+        padding: 0;
     }
     header {
         font-size: 1em;
     }
+    .title, .bio {
+        padding: 1%;
+        width: 80%
+    }
+    .profile-link {
+        flex-basis: 50%;
+    }
+ 
     .profile-links {
         grid-template-columns: repeat(2, auto);
     }
     .contact{
         grid-template-columns: 1fr;
+        flex-direction: column-reverse;    }
+    .form {
+        border: 1px dashed #ccc;
+        width: 80%
     }
-    .profile-link {
-        flex-basis: 50%;
+    .contact-message{
+        order: -2;
     }
 }
 @media (max-width: 500px){
-    /* * {
+    * {
         margin: 0;
         padding: 0;
         font-size: 1em;
-    } */
+    }
     .container {
         width:100%;
         display: flex;
         flex-direction: column;
     }
     .grid-item {
+        border: none;
+        flex-basis: 100%;
         padding: 0;
         margin: 0;
     }
-    .grid-items {
-        border: none
-    }
+    
     
     .profile-links {
         grid-template-columns: 1fr;
