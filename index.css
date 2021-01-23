@@ -211,9 +211,13 @@ footer {
     header {
         font-size: 1em;
     }
+    .title {
+        font-size: 6em;
+    }
     .title, .bio {
         padding: 1%;
-        width: 80%
+        width: 80%;
+        margin: 0 auto;
     }
     .profile-link {
         flex-basis: 50%;
@@ -223,7 +227,11 @@ footer {
         grid-template-columns: repeat(2, auto);
     }
     .portfolio {
-        grid-gap: 2%;
+        /* grid-gap: 2%; */
+        padding: 5%;
+    }
+    .portfolio-item {
+        flex-basis: 50%;
     }
     /* .portfolio-item,
     .portfilio-item::after,
@@ -233,9 +241,8 @@ footer {
     .contact{
         grid-template-columns: 1fr;
         flex-direction: column-reverse;    }
-    .form {
-        border: 1px dashed #ccc;
-        width: 80%
+    form {
+        margin: 0 auto;
     }
     .contact-message{
         order: -2;
