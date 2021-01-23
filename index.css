@@ -28,18 +28,21 @@ body {
     text-align: center;
 }
 /* HEADER SECTION */
-header {
+    header {
     /* background-color: #2F2fA2; */
     background: #005C97;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 nav {
     line-height: 2;
 }
 nav ul li a {
+    color: #ccc;
     font-size: 1.5em;
+}
+nav ul li a:hover {
+    color: rgb(127, 124, 133);
 }
 .title {
     color: #fff;
@@ -127,8 +130,8 @@ nav ul li a {
     background-color: #2F2fA2;
     display: grid;
     grid-template-columns: repeat(2, auto);
+    width: 100vw;
     /* padding: 20px 40px; */
-    border-radius: 5px;
     /* padding: 5em; */
 }
 
@@ -245,18 +248,21 @@ footer {
         font-size: 1em;
     }
     .container {
+        justify-content: center;
         width:100%;
         display: flex;
         flex-direction: column;
     }
     .grid-item {
+        justify-content: center;
         border: none;
         flex-basis: 100%;
         padding: 0;
         margin: 0;
     }
-    
-    
+    header {
+        justify-content: center;
+    }
     .profile-links {
         grid-template-columns: 1fr;
         grid-gap: 10px;
@@ -270,5 +276,31 @@ footer {
         margin: 0;
         padding: 0;
     }
-
+    .title {
+        font-size: 5em;
+        margin: 0 auto
+    }
+    .bio {
+        margin: 0 auto;
+    }
+    .portfolio {
+        padding-bottom: 5%;
+    }
+    .portfolio-item {
+        margin: 5%;
+    }
+    .contact{
+        padding: 5%;
+    }
+    form {
+        border: 10px dotted #1b1d8a;
+        margin: 0 auto;
+        padding: 5% 10%;
+    }
+    .contact-message {
+        padding-bottom: 10%;
+    }
+    footer {
+        width: 100vw;
+    }
 }
