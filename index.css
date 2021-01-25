@@ -1,0 +1,313 @@
+/* PARAGRAPH FONT */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Roboto:wght@100;900&display=swap');
+/* FEATURE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap');
+/* UNIVERSAL STYLING */
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Chakra Petch', sans-serif;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+.grid-item {
+    /* border: 1px solid #ccc; */
+    padding: 3rem;
+    text-align: center;
+}
+/* HEADER SECTION */
+    header {
+    /* background-color: #2F2fA2; */
+    background: #005C97;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+nav {
+    line-height: 2;
+}
+nav ul li a {
+    color: #ccc;
+    font-size: 1.5em;
+}
+nav ul li a:hover {
+    color: rgb(127, 124, 133);
+}
+.title {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 9em;
+    justify-content: center;
+}
+
+
+/* PROFILE LINKS SECTION */
+.profile-links {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+    justify-content: center;
+    padding: 3em;    
+}
+/* .profile-link {
+    color: #F64C72;
+    color: rgb(231, 12, 85);
+    font-size: 3em;
+} */
+.profile-link {
+    color: #F64C72;
+    font-size: 3em;
+    border: 1px solid #F64C72;
+    padding: 50px;
+    flex-basis: 50%;
+    justify-content: center;
+
+    text-align: center;
+}
+.profile-link a:visited {
+    color: #ec849b;
+
+}
+.bio {
+    line-height: 2;
+    font-size: 1.5em;
+}
+
+
+/* TICKER */
+.ticker {
+
+}
+/* PORTFOLIO SECTION */
+.portfolio {
+    background: #fafafa;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* height: 500px;
+    width: 500px; */
+}
+.portfolio-item {
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    width: 150px;
+    position: relative;
+}
+.portfolio-item::after {
+    content: "";
+    background-color: #ec849b;
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    transform: skewY(45deg);
+}
+.portfolio-item::before {
+    content: "";
+    background-color:#F64C72;
+    position: absolute;
+    bottom: -15px;
+    left: 8px;
+    height: 15px;
+    width: 100%;
+    transform: skewX(45deg);
+}
+/* CONTACT SECTION */
+.contact {
+    background-color: #2F2fA2;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: 100vw;
+    /* padding: 20px 40px; */
+    /* padding: 5em; */
+}
+
+.form-input {
+position: relative;
+margin: 20px 0 40px;
+width: 300px;
+}
+
+.form-input h5{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-input input,
+.form-input textarea {
+    background-color: transparent;
+    color: #000;
+    border: 0;
+    border-bottom: 2px solid #ccc;;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+}
+.form-input input:focus,
+.form-input input:valid,
+.form-input textarea:focus,
+.form-input textarea:valid {
+    outline: 0
+}
+
+.btn {
+    background-color: #F64C72;
+    cursor: pointer;
+    display: inline-block;
+    width: 50%;
+    padding: 15px 0;
+    
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+}
+.btn:focus {
+    outline: 0;
+}
+.btn:active {
+    transform: scale(.98);
+}
+.text {
+    color: #000;
+    margin-top: 30px;
+}
+.form-input label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.contact-message {
+    vertical-align: middle;
+}
+footer {
+    background-color: #242582
+}
+@media (max-width: 1100) {
+    .profile-link {
+        flex-basis: 20%;
+    }
+}
+
+@media (max-width: 800px){
+    
+    section, .grid-item {
+        padding: 0;
+    }
+    header {
+        font-size: 1em;
+    }
+    .title {
+        font-size: 6em;
+    }
+    .title, .bio {
+        padding: 1%;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .profile-link {
+        flex-basis: 50%;
+    }
+ 
+    .profile-links {
+        grid-template-columns: repeat(2, auto);
+    }
+    .portfolio {
+        /* grid-gap: 2%; */
+        padding: 5%;
+    }
+    .portfolio-item {
+        flex-basis: 50%;
+    }
+    /* .portfolio-item,
+    .portfilio-item::after,
+    .portfolio-item::before {
+        flex-basis: 50%;
+    } */
+    .contact{
+        grid-template-columns: 1fr;
+        flex-direction: column-reverse;    }
+    form {
+        margin: 0 auto;
+    }
+    .contact-message{
+        order: -2;
+    }
+}
+@media (max-width: 500px){
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+    .container {
+        justify-content: center;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-item {
+        justify-content: center;
+        border: none;
+        flex-basis: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    header {
+        justify-content: center;
+    }
+    .profile-links {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .profile-link {
+        border: none;
+        flex-basis: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .title {
+        font-size: 5em;
+        margin: 0 auto
+    }
+    .bio {
+        margin: 0 auto;
+    }
+    .portfolio {
+        padding-bottom: 5%;
+    }
+    .portfolio-item {
+        margin: 5%;
+    }
+    .contact{
+        padding: 5%;
+    }
+    form {
+        border: 10px dotted #1b1d8a;
+        margin: 0 auto;
+        padding: 5% 10%;
+    }
+    .contact-message {
+        padding-bottom: 10%;
+    }
+    footer {
+        width: 100vw;
+    }
+}

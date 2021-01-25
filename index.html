@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" <i class="fas fa-air-freshener"></i>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+    <link href="index.css" rel="stylesheet" />
+    <title>Monica</title>
+</head>
+<body>
+    <div class="container" id="home">
+
+        <header class="grid-item">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#home">
+                            <i class="fas fa-air-freshener"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact">contact</a>
+                    </li>
+                    <!-- <li>resume</li>
+                    <li>merch</li> -->
+                </ul>
+            </nav>
+            <h1 class="title">Hi, I'm Monica!</h1>
+            <h2>Web Design // Web Development</h2>
+            <section class="profile-links">
+                <div class="profile-link github">
+                    <a href="https://github.com/MonicaHoward" target="_blank"><i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="profile-link linkedin">
+                    <a href="https://www.linkedin.com/in/monica-howard/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <div class="profile-link email"><a href="#"><i class="fas fa-envelope-open-text"></i></a>
+                </div>
+                <div class="profile-link phone">
+                    <a href="#"><i class="fas fa-phone-volume"></i></a>
+
+
+                </div>
+            </section>
+            <div class="grid-item bio">
+                <p>I'm web developer with over 3 years of experience. I love the versitility of javascript and I still do a happy dance everytime I refresh the page and my code works! I've taught web design and development to kids and adults since 2017.  I speak in memes, I love tacos and my idea of great vaction is a road trip. When I'm not coding I'm watching true crime or  learning American Sign Language.</p>
+            </div>
+        </header>
+        <!-- add this to js array: loves javascript, flys drones, loves to craft -->
+        <section class="grid-item ticker">
+            <h2>This girl <span>loves javascript</span></h2>
+        </section>
+       
+
+       <!-- PORTFOLIO SECTION -->
+       <section class="grid-item portfolio" id="portfolio">
+           <div 
+           class="portfolio-item" style="background-image:url('https://cdn.freebiesupply.com/logos/thumbs/2x/the-wire-logo.png');"
+           >
+           </div>
+           <div class="portfolio-item" style="background-image:url('https://deltafonts.com/wp-content/uploads/Boardwalk-Empire-tv-logo.png');"></div>
+           <div class="portfolio-item" style="background-image:url('https://image.spreadshirtmedia.com/image-server/v1/compositions/T31A1PA29PT10X30Y38D104434314FS9767/views/1,width=650,height=650,appearanceId=1.jpg');"></div> 
+           <div class="portfolio-item" style="background-image:url('https://www.emmys.com/sites/default/files/Fargo.jpg');"></div> 
+
+       </section>
+       <section class="grid-item contact" id="contact">
+        <form 
+            class="contact-form"
+            action="https://formspree.io/f/mzbkorjv"
+            method="POST"
+        >
+            <h4>TALK TO ME</h4>
+            <div class="form-input">
+                <input type="text" name="_replyto" required/>
+                <label>Enter your email</label>
+            </div>
+            <div class="form-input">                    
+                <textarea name="message"></textarea>
+                <label>Type your message:</label>
+                
+            </div>
+            <div class="form-input">
+                <button type="submit" class="btn">Send</button>
+            </div>
+        </form>
+        <div class="contact-message">
+            <p>Leave me a note. I'll get notified via email that you said, 'hi!'</p>
+            <p>Or use the links below to keep in touch.</p>
+            <a href="https://www.linkedin.com/in/monica-howard/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <i class="fas fa-envelope-open-text"></i>
+            <i class="fas fa-phone-volume"></i>
+        </div>
+       </section>
+        <footer class="grid-item">
+            <h6>&copy; Copyright 2021 <a>- Monica Howard</a></h6>
+        </footer>
+    </div>
+</body>
+</html>
